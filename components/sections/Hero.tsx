@@ -10,7 +10,7 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden bg-[#050505]"
     >
-      <div className="absolute left-1/2 top-40 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/20 blur-[140px]" />
+      <div className="pointer-events-none absolute left-1/2 top-40 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/20 blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
@@ -57,14 +57,29 @@ export default function Hero() {
           }}
           className="mt-12 flex flex-wrap gap-4"
         >
-          <Button size="lg">
-            Ver Projetos
-          </Button>
+          <a href="#projects">
+            <Button
+              size="lg"
+              className="bg-blue-600 text-white hover:bg-blue-500"
+            >
+              Ver Projetos
+            </Button>
+          </a>
 
-          <Button variant="outline" size="lg">
-            Solicitar orçamento
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <a
+            href="https://wa.me/5579988529932?text=Olá!%20Vim%20pelo%20site%20da%20KaMacieira%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-blue-500 bg-transparent text-blue-400 hover:bg-blue-500 hover:text-white"
+            >
+              Solicitar orçamento
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
         </motion.div>
 
       </div>
