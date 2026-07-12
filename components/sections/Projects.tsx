@@ -1,21 +1,29 @@
+import ProjectCard from "@/components/ProjectCard";
+
 const projects = [
   {
     title: "Ajuê",
     description:
       "Aplicativo mobile para acompanhamento de atividades físicas, com foco em corrida, métricas e experiência do usuário.",
     technologies: ["React Native", "Expo", "Firebase"],
+    demo: "#",
+    github: "#",
   },
   {
-    title: "Sistemas Web",
+    title: "Portfolio KaMacieira",
     description:
-      "Aplicações web personalizadas para automatizar processos e melhorar a organização de negócios.",
-    technologies: ["Next.js", "TypeScript", "Banco de dados"],
+      "Landing page moderna desenvolvida para apresentar serviços, projetos e facilitar o contato com clientes.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+    demo: "#",
+    github: "#",
   },
   {
-    title: "Landing Pages",
+    title: "Seu projeto pode ser o próximo",
     description:
-      "Páginas modernas e responsivas para empresas apresentarem seus serviços e conquistarem clientes.",
-    technologies: ["Next.js", "Tailwind CSS", "UI Design"],
+      "Desenvolvimento de sites, sistemas web e aplicativos personalizados para empresas e profissionais.",
+    technologies: ["UI/UX", "Performance", "Responsividade"],
+    demo: "#contact",
+    github: "#",
   },
 ];
 
@@ -27,39 +35,31 @@ export default function Projects() {
     >
       <div className="mx-auto max-w-7xl px-6">
 
-        <p className="uppercase tracking-[0.35em] text-blue-400">
-          Projetos
-        </p>
+        <div className="max-w-3xl">
+          <p className="uppercase tracking-[0.35em] text-blue-400">
+            Projetos
+          </p>
 
-        <h2 className="mt-4 text-4xl font-black md:text-6xl">
-          Trabalhos desenvolvidos.
-        </h2>
+          <h2 className="mt-4 text-4xl font-black md:text-6xl">
+            Trabalhos desenvolvidos.
+          </h2>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <p className="mt-6 text-lg leading-8 text-zinc-400">
+            Alguns dos projetos criados pela KaMacieira utilizando tecnologias
+            modernas, foco em desempenho e uma boa experiência para o usuário.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {projects.map((project) => (
-            <div
+            <ProjectCard
               key={project.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-8"
-            >
-              <h3 className="text-2xl font-bold">
-                {project.title}
-              </h3>
-
-              <p className="mt-4 leading-7 text-zinc-400">
-                {project.description}
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              demo={project.demo}
+              github={project.github}
+            />
           ))}
         </div>
 
