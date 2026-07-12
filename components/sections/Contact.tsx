@@ -9,22 +9,22 @@ import confetti from "canvas-confetti";
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
-};
+} as const;
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
+} as const;
 
 const fadeRight = {
   hidden: { opacity: 0, x: 50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
+} as const;
 
 const stagger = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.15 } },
-};
+} as const;
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -37,9 +37,8 @@ export default function Contact() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  // Função que cria a animação de fogos de artifício / estrelinhas
   const dispararCelebracao = () => {
-    const duracao = 3 * 1000; // 3 segundos de fogos
+    const duracao = 3 * 1000;
     const fim = Date.now() + duracao;
 
     const intervalo = setInterval(() => {
@@ -49,13 +48,12 @@ export default function Contact() {
         return clearInterval(intervalo);
       }
 
-      // Dispara do lado esquerdo e direito simulando fogos de artifício
       confetti({
         particleCount: 5,
         angle: 60,
         spread: 55,
         origin: { x: 0, y: 0.8 },
-        colors: ["#60a5fa", "#34d399", "#fbbf24", "#f43f5e"], // Cores modernas
+        colors: ["#60a5fa", "#34d399", "#fbbf24", "#f43f5e"],
       });
       confetti({
         particleCount: 5,
@@ -87,10 +85,7 @@ export default function Contact() {
 
       setSuccess("Mensagem enviada com sucesso! Entrarei em contato em breve.");
       setForm({ name: "", email: "", message: "" });
-      
-      // Ativa o efeito de estrelinhas/fogos de artifício
       dispararCelebracao();
-
     } catch (err: any) {
       console.error("Erro EmailJS:", err);
       setError("Não foi possível enviar sua mensagem. Tente novamente mais tarde.");
