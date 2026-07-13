@@ -6,7 +6,7 @@ const projects = [
     description:
       "Aplicativo de corrida e esportes com GPS em tempo real. Projeto em desenvolvimento focado em alta performance e métricas precisas.",
     technologies: ["React Native", "Expo", "Firebase"],
-    demo: "#",
+    demo: "https://github.com/kaiquemacieira/Ajue", // Apontando para o GitHub
     github: "https://github.com/kaiquemacieira/Ajue", 
   },
   {
@@ -21,9 +21,8 @@ const projects = [
     title: "Seu projeto pode ser o próximo",
     description:
       "Desenvolvimento de sites, sistemas web e aplicativos personalizados para empresas e profissionais.",
-    technologies: ["UI/UX", "Performance", "Responsividade"],
-    demo: "#contact",
-    github: "#",
+    demo: "#contact", // Este mantém o link para o formulário de contato
+    github: "#contact",
   },
 ];
 
@@ -32,7 +31,7 @@ export default function Projects() {
     <section id="projects" className="bg-[#050505] py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
-          <p className="uppercase tracking-[0.35em] text-blue-400">
+          <p className="uppercase tracking-[0.35em] text-blue-400 font-medium">
             Projetos
           </p>
           <h2 className="mt-4 text-4xl font-black md:text-6xl">

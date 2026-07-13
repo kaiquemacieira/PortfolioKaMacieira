@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   description:
     "Desenvolvedor focado em criar sites e sistemas que geram resultados reais. Transforme sua ideia em um produto digital profissional.",
   authors: [{ name: "Kaíque Macieira" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
