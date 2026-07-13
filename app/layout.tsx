@@ -12,9 +12,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kaique Macieira | Desenvolvedor Full Stack",
+  title: "Kaíque Macieira | Desenvolvedor Full Stack",
   description:
-    "Desenvolvedor Full Stack especializado em aplicações web e mobile.",
+    "Desenvolvedor focado em criar sites e sistemas que geram resultados reais. Transforme sua ideia em um produto digital profissional.",
+  authors: [{ name: "Kaíque Macieira" }],
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -23,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={geist.variable}>
-      <body className={`${inter.className} bg-[#050505] text-white`}>
+    <html lang="pt-BR" className={`${geist.variable} scroll-smooth`}>
+      <body className={`${inter.className} bg-[#050505] text-white antialiased`}>
         {children}
       </body>
     </html>

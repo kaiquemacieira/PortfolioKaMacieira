@@ -110,11 +110,10 @@ export default function Contact() {
           </motion.p>
 
           <motion.h2
-            key="contact-main-title"
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-            className="mt-4 text-4xl font-black leading-tight md:text-6xl block"
+            className="mt-4 text-4xl font-black leading-tight md:text-6xl"
           >
             Vamos conversar sobre o seu próximo projeto.
           </motion.h2>
@@ -155,65 +154,52 @@ export default function Contact() {
           <motion.form onSubmit={handleSubmit} className="space-y-6">
             
             <motion.div variants={fadeUp}>
-              <label className="mb-2 block text-sm font-medium">Nome</label>
+              <label className="mb-2 block text-sm font-medium text-zinc-400">Nome</label>
               <motion.input
                 whileFocus={{ scale: 1.01 }}
-                transition={{ duration: 0.2 }}
                 type="text"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Seu nome"
+                placeholder="Como posso te chamar?"
                 required
-                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500"
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500 focus:bg-black/40"
               />
             </motion.div>
 
             <motion.div variants={fadeUp}>
-              <label className="mb-2 block text-sm font-medium">E-mail</label>
+              <label className="mb-2 block text-sm font-medium text-zinc-400">E-mail</label>
               <motion.input
                 whileFocus={{ scale: 1.01 }}
-                transition={{ duration: 0.2 }}
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="voce@email.com"
+                placeholder="Seu melhor e-mail"
                 required
-                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500"
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500 focus:bg-black/40"
               />
             </motion.div>
 
             <motion.div variants={fadeUp}>
-              <label className="mb-2 block text-sm font-medium">Conte sobre seu projeto</label>
+              <label className="mb-2 block text-sm font-medium text-zinc-400">Objetivo do projeto</label>
               <motion.textarea
                 whileFocus={{ scale: 1.01 }}
-                transition={{ duration: 0.2 }}
-                rows={6}
+                rows={4}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="Descreva seu projeto..."
+                placeholder="O que você precisa? (ex: site para loja, sistema de agendamento, etc)"
                 required
-                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500"
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 outline-none transition focus:border-blue-500 focus:bg-black/40"
               />
             </motion.div>
 
             {success && (
-              <motion.p 
-                initial={{ opacity: 0, y: 15, scale: 0.95 }} 
-                animate={{ opacity: 1, y: 0, scale: 1 }} 
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="rounded-lg bg-green-500/10 p-4 text-green-400 font-medium border border-green-500/20"
-              >
+              <motion.p className="rounded-lg bg-green-500/10 p-4 text-green-400 font-medium border border-green-500/20">
                 {success}
               </motion.p>
             )}
 
             {error && (
-              <motion.p 
-                initial={{ opacity: 0, y: 15, scale: 0.95 }} 
-                animate={{ opacity: 1, y: 0, scale: 1 }} 
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="rounded-lg bg-red-500/10 p-4 text-red-400 font-medium border border-red-500/20"
-              >
+              <motion.p className="rounded-lg bg-red-500/10 p-4 text-red-400 font-medium border border-red-500/20">
                 {error}
               </motion.p>
             )}
@@ -221,14 +207,12 @@ export default function Contact() {
             <motion.button
               type="submit"
               disabled={loading}
-              whileHover={!loading ? { scale: 1.03, y: -2 } : {}}
+              whileHover={!loading ? { scale: 1.02 } : {}}
               whileTap={!loading ? { scale: 0.98 } : {}}
-              transition={{ duration: 0.2 }}
               className="w-full rounded-xl bg-blue-600 px-6 py-4 font-semibold text-white transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {loading ? "Enviando..." : "Solicitar orçamento"}
             </motion.button>
-
           </motion.form>
         </motion.div>
       </motion.div>

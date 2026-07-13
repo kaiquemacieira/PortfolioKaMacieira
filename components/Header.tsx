@@ -6,12 +6,12 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  // Removi o "Contato" da lista de links comuns para destacá-lo
   const links = [
     { name: "Sobre", href: "#about" },
     { name: "Serviços", href: "#services" },
     { name: "Processo", href: "#process" },
     { name: "Projetos", href: "#projects" },
-    { name: "Contato", href: "#contact" },
   ];
 
   return (
@@ -26,22 +26,32 @@ export default function Header() {
         </a>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-10 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition hover:text-blue-400"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center gap-10">
+          <nav className="flex items-center gap-8">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-gray-300 transition hover:text-blue-400"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+          
+          {/* Botão de Conversão (Desktop) */}
+          <a
+            href="#contact"
+            className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-blue-500 hover:scale-105 active:scale-95"
+          >
+            Fazer Orçamento
+          </a>
+        </div>
 
         {/* Botão Mobile */}
         <button
           type="button"
-          className="md:hidden"
+          className="text-gray-300 md:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-label="Abrir menu"
         >
@@ -58,11 +68,20 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-lg transition hover:text-blue-400"
+                className="text-lg font-medium text-gray-300 transition hover:text-blue-400"
               >
                 {link.name}
               </a>
             ))}
+            
+            {/* Botão de Conversão (Mobile) */}
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="mt-4 flex justify-center rounded-lg bg-blue-600 px-6 py-3 text-lg font-bold text-white transition hover:bg-blue-500"
+            >
+              Fazer Orçamento
+            </a>
           </div>
         </nav>
       )}

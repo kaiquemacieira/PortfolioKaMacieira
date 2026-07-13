@@ -4,18 +4,18 @@ const projects = [
   {
     title: "Ajuê",
     description:
-      "Aplicativo mobile para acompanhamento de atividades físicas, com foco em corrida, métricas e experiência do usuário.",
+      "Aplicativo de corrida e esportes com GPS em tempo real. Projeto em desenvolvimento focado em alta performance e métricas precisas.",
     technologies: ["React Native", "Expo", "Firebase"],
     demo: "#",
-    github: "#",
+    github: "https://github.com/kaiquemacieira/Ajue", 
   },
   {
     title: "Portfolio KaMacieira",
     description:
       "Landing page moderna desenvolvida para apresentar serviços, projetos e facilitar o contato com clientes.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
-    demo: "#",
-    github: "#",
+    demo: "https://kamacieira.vercel.app/", 
+    github: "https://github.com/kaiquemacieira/PortfolioKaMacieira",
   },
   {
     title: "Seu projeto pode ser o próximo",
@@ -29,21 +29,15 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="bg-[#050505] py-24"
-    >
+    <section id="projects" className="bg-[#050505] py-24">
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="max-w-3xl">
           <p className="uppercase tracking-[0.35em] text-blue-400">
             Projetos
           </p>
-
           <h2 className="mt-4 text-4xl font-black md:text-6xl">
             Trabalhos desenvolvidos.
           </h2>
-
           <p className="mt-6 text-lg leading-8 text-zinc-400">
             Alguns dos projetos criados pela KaMacieira utilizando tecnologias
             modernas, foco em desempenho e uma boa experiência para o usuário.
@@ -62,7 +56,6 @@ export default function Projects() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );
