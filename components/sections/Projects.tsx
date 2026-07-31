@@ -18,6 +18,14 @@ const projects = [
     github: "https://github.com/kaiquemacieira/PortfolioKaMacieira",
   },
   {
+    title: "Copa Vela 2026",
+    description:
+      "Guia digital completo da Copa Vela em Paulo Afonso (BA): programação, clima ao vivo, acessibilidade (VLibras), leads de patrocínio e portal da cidade.",
+    technologies: ["HTML", "JavaScript", "Supabase", "Vercel"],
+    demo: "https://copa-vela-2026.vercel.app/",
+    github: "https://copa-vela-2026.vercel.app/",
+  },
+  {
     title: "Seu projeto pode ser o próximo",
     description:
       "Desenvolvimento de sites, sistemas web e aplicativos personalizados para empresas e profissionais.",
