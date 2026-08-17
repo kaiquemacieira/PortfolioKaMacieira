@@ -18,7 +18,7 @@ export default function Header() {
           className="text-2xl font-bold tracking-tight transition hover:text-blue-400"
           onClick={() => setOpen(false)}
         >
-          KaMacieira<span className="text-blue-500">.</span>
+          Kå<span className="text-blue-500">.</span>
         </a>
 
         {/* Desktop */}

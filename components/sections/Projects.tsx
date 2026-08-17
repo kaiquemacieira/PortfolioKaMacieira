@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
@@ -7,10 +8,10 @@ const projects = [
       "Aplicativo desenvolvido para otimizar processos e facilitar o dia a dia dos usuários com uma experiência moderna e intuitiva.",
     technologies: ["React Native", "Expo", "Firebase"],
     demo: "https://cricri-2026.vercel.app/",
-    github: "https://cricri-2026.vercel.app/",
+    github: "https://github.com/kaiquemacieira/fascunderground",
   },
   {
-    title: "Portfolio KaMacieira",
+    title: "Portfolio Kå",
     description:
       "Landing page moderna desenvolvida para apresentar serviços, projetos e facilitar o contato com clientes.",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
@@ -46,8 +47,7 @@ export default function Projects() {
             Trabalhos desenvolvidos.
           </h2>
           <p className="mt-6 text-lg leading-8 text-zinc-400">
-            Alguns dos projetos criados pela KaMacieira utilizando tecnologias
-            modernas, foco em desempenho e uma boa experiência para o usuário.
+            projetos e artigos.
           </p>
         </div>
 
@@ -62,6 +62,21 @@ export default function Projects() {
               github={project.github}
             />
           ))}
+
+          <Link
+            href="/artigos"
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 flex flex-col h-full justify-between transition hover:border-blue-500/50"
+          >
+            <div>
+              <h3 className="text-2xl font-bold">Artigos Publicados</h3>
+              <p className="mt-4 text-zinc-400">
+                Confira os artigos e conteúdos publicados.
+              </p>
+            </div>
+            <span className="mt-8 text-sm font-semibold hover:text-blue-400 transition">
+              Ver artigos →
+            </span>
+          </Link>
         </div>
       </div>
     </section>

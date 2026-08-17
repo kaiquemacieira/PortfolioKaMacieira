@@ -11,12 +11,8 @@ export default function Footer() {
         {/* Marca */}
         <div>
           <h2 className="text-3xl font-black">
-            KaMacieira<span className="text-blue-500">.</span>
+            Kå<span className="text-blue-500">.</span>
           </h2>
-          <p className="mt-6 max-w-sm leading-7 text-zinc-400">
-            Transformo ideias em plataformas digitais de alta performance. 
-            Sites rápidos, seguros e focados em gerar resultados reais para o seu negócio.
-          </p>
         </div>
 
         {/* Navegação */}
@@ -56,7 +52,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-sm text-zinc-500">
-        © {new Date().getFullYear()} KaMacieira. Todos os direitos reservados.
+        © {new Date().getFullYear()} Kå. Todos os direitos reservados.
       </div>
     </footer>
   );
