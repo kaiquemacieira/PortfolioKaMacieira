@@ -2,12 +2,12 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Ajuê",
+    title: "Fasc APP",
     description:
-      "Aplicativo de corrida e esportes com GPS em tempo real. Projeto em desenvolvimento focado em alta performance e métricas precisas.",
+      "Aplicativo desenvolvido para otimizar processos e facilitar o dia a dia dos usuários com uma experiência moderna e intuitiva.",
     technologies: ["React Native", "Expo", "Firebase"],
-    demo: "https://github.com/kaiquemacieira/Ajue", // Apontando para o GitHub
-    github: "https://github.com/kaiquemacieira/Ajue", 
+    demo: "https://cricri-2026.vercel.app/",
+    github: "https://cricri-2026.vercel.app/",
   },
   {
     title: "Portfolio KaMacieira",

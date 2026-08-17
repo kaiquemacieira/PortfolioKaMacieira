@@ -6,11 +6,7 @@ import { Menu, X } from "lucide-react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
-  // Removi o "Contato" da lista de links comuns para destacá-lo
   const links = [
-    { name: "Sobre", href: "#about" },
-    { name: "Serviços", href: "#services" },
-    { name: "Processo", href: "#process" },
     { name: "Projetos", href: "#projects" },
   ];
 
@@ -44,7 +40,7 @@ export default function Header() {
             href="#contact"
             className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-blue-500 hover:scale-105 active:scale-95"
           >
-            Fazer Orçamento
+            Contato
           </a>
         </div>
 
@@ -80,7 +76,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-4 flex justify-center rounded-lg bg-blue-600 px-6 py-3 text-lg font-bold text-white transition hover:bg-blue-500"
             >
-              Fazer Orçamento
+              Contato
             </a>
           </div>
         </nav>
