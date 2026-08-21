@@ -27,6 +27,14 @@ const projects = [
     github: "https://copa-vela-2026.vercel.app/",
   },
   {
+    title: "Abatômetro",
+    description:
+      "Plataforma de conscientização sobre o consumo de carne, com contadores em tempo real baseados em dados da FAOSTAT e uma calculadora de impacto pessoal.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    demo: "https://abatometro.vercel.app/",
+    github: "https://github.com/kaiquemacieira/Abatometro",
+  },
+  {
     title: "Seu projeto pode ser o próximo",
     description:
       "Desenvolvimento de sites, sistemas web e aplicativos personalizados para empresas e profissionais.",
